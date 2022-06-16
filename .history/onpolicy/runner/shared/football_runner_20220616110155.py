@@ -20,7 +20,8 @@ class FootballRunner(Runner):
         super(FootballRunner, self).__init__(config)
         self.env_infos = defaultdict(list)
        
-    def run(self):
+    def run(self):un at https://wandb.ai/forsys/Football/runs/1186ndsv
+
         self.warmup()   
 
         start = time.time()

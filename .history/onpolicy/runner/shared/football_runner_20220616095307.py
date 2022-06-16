@@ -128,11 +128,14 @@ class FootballRunner(Runner):
         rnn_states_critic[dones_env == True] = np.zeros(((dones_env == True).sum(), self.num_agents, self.recurrent_N, self.hidden_size), dtype=np.float32)
         masks = np.ones((self.n_rollout_threads, self.num_agents, 1), dtype=np.float32)
         masks[dones_env == True] = np.zeros(((dones_env == True).sum(), self.num_agents, 1), dtype=np.float32)
+        
+        import pdb
+pdb.set_trace()
 
         self.buffer.insert(
             share_obs=obs,
             obs=obs,
-            rnn_states_actor=rnn_states,
+            rnn_states=rnn_states,
             rnn_states_critic=rnn_states_critic,
             actions=actions,
             action_log_probs=action_log_probs,

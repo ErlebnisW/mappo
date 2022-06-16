@@ -98,6 +98,7 @@ def main(args):
     parser = get_config()
     all_args = parse_args(args, parser)
 
+
     # save args for debugging
     import json
 #    with open('commandline_args.txt','w') as f:

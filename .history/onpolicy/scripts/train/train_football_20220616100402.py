@@ -97,12 +97,13 @@ def parse_args(args, parser):
 def main(args):
     parser = get_config()
     all_args = parse_args(args, parser)
+#    all_args.use_recurrent_policy = False
 
     # save args for debugging
     import json
 #    with open('commandline_args.txt','w') as f:
-#        json.dump(all_args.__dict__,f,indent=2)
-    with open('/home/richard/Codes/rl/mappo/onpolicy/scripts/commandline_args.txt','r') as f:
+        json.dump(all_args.__dict__,f,indent=2)
+    with open('commandline_args.txt','r') as f:
         all_args.__dict__=json.load(f)   
         
     if all_args.algorithm_name == "rmappo" or all_args.algorithm_name == "rmappg":

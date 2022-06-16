@@ -97,6 +97,7 @@ def parse_args(args, parser):
 def main(args):
     parser = get_config()
     all_args = parse_args(args, parser)
+#    all_args.use_recurrent_policy = False
 
     # save args for debugging
     import json

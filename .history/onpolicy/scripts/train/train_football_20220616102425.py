@@ -104,6 +104,8 @@ def main(args):
 #        json.dump(all_args.__dict__,f,indent=2)
     with open('/home/richard/Codes/rl/mappo/onpolicy/scripts/commandline_args.txt','r') as f:
         all_args.__dict__=json.load(f)   
+    
+    
         
     if all_args.algorithm_name == "rmappo" or all_args.algorithm_name == "rmappg":
         assert (all_args.use_recurrent_policy or all_args.use_naive_recurrent_policy), ("check recurrent policy!")
