@@ -25,7 +25,7 @@ eval_episodes=100
 n_eval_rollout_threads=100 
 
 # tune param
-n_rollout_threads=5
+n_rollout_threads=50
 ppo_epoch=10
 num_mini_batch=2
 

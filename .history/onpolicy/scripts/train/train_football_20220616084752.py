@@ -97,7 +97,6 @@ def parse_args(args, parser):
 def main(args):
     parser = get_config()
     all_args = parse_args(args, parser)
-    all_args.use_recurrent_policy = False
 
     if all_args.algorithm_name == "rmappo" or all_args.algorithm_name == "rmappg":
         assert (all_args.use_recurrent_policy or all_args.use_naive_recurrent_policy), ("check recurrent policy!")
@@ -129,7 +128,7 @@ def main(args):
     if all_args.use_wandb:
         run = wandb.init(config=all_args,
                          project=all_args.env_name,
-#                         entity=all_args.wandb_name,
+                         entity=all_args.wandb_name,
                          notes=socket.gethostname(),
                          name="-".join([
                             all_args.algorithm_name,
