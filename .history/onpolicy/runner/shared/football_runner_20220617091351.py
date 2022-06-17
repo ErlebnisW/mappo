@@ -24,7 +24,7 @@ class FootballRunner(Runner):
         self.warmup()   
 
         start = time.time()
-        # total steps / number of steps per batch / number of rollout threads
+        # total steps / 
         episodes = int(self.num_env_steps) // self.episode_length // self.n_rollout_threads
 
         for episode in range(episodes):

@@ -107,7 +107,7 @@ class FootballRunner(Runner):
 
         actions_env = [actions[idx, :, 0] for idx in range(self.n_rollout_threads)]
 
-        return values, actions, action_log_probs, rnn_states, rnn_states_critic, actions_env
+ac        return values, actions, action_log_probs, rnn_states, rnn_states_critic, actions_env
 
     def insert(self, data):
         obs, rewards, dones, infos, values, actions, action_log_probs, rnn_states, rnn_states_critic = data

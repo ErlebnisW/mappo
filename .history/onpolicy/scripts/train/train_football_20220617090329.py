@@ -191,9 +191,8 @@ def main(args):
     else:
         from onpolicy.runner.separated.football_runner import FootballRunner as Runner
         
-    # initialize envs
+    # initilize
     runner = Runner(config)
-    # run experiments
     runner.run()
     
     # post process

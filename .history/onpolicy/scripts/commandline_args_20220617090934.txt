@@ -13,7 +13,7 @@
   "use_wandb": false,
   "env_name": "Football",
   "use_obs_instead_of_state": false,
-  "episode_length": 200, 
+  "episode_length": 200,  # step length of one batch
   "share_policy": true,
   "use_centralized_V": true,
   "stacked_frames": 1,

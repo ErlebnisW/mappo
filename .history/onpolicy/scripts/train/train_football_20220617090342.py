@@ -193,7 +193,6 @@ def main(args):
         
     # initialize envs
     runner = Runner(config)
-    # run experiments
     runner.run()
     
     # post process

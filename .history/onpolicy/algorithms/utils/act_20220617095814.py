@@ -76,7 +76,7 @@ class ACTLayer(nn.Module):
             action_log_probs = torch.cat(action_log_probs, -1)
         
         else:
-            action_logits = self.action_out(x, available_actions) #action distribution
+            action_logits = self.action_out(x, available_actions) #action dist
             actions = action_logits.mode() if deterministic else action_logits.sample() 
             action_log_probs = action_logits.log_probs(actions)
         
